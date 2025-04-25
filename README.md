@@ -15,14 +15,14 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 
 ## 🔍 Individual Research Questions & Objectives
 
-### 🖼️ Image Analysis (Team Member 1)
+### 🖼️ Image Analysis
 - **Research Question**: How can image segmentation be used to classify materials and surfaces contributing to UHI?
 - **Objectives**:
   - Design a mobile app for image capture and automatic segmentation.
   - Identify surface types (e.g., concrete, vegetation, asphalt) from photos.
   - Store and manage segmented data for IoT integration and analysis.
 
-### 🔧 IoT & Navigation (Sachinthaka Ayeshmantha)
+### 🔧 IoT & Navigation
 - **Research Question**: How can SLAM and thermal imaging be integrated in a mobile IoT device for efficient, automated temperature mapping of urban environments?
 - **Objectives**:
   - Develop a mobile robot with SLAM for autonomous navigation.
@@ -30,14 +30,14 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
   - Implement image-based object matching for accurate temperature data alignment.
   - Optimize communication and power systems for long-duration outdoor operation.
 
-### 📊 Data Processing with VLMs (Team Member 2)
+### 📊 Data Processing with VLMs
 - **Research Question**: How can Visual Language Models and Explainable AI improve interpretation of heat data and suggest mitigation strategies?
 - **Objectives**:
   - Integrate collected temperature and image data into a VLM pipeline.
   - Use prompt engineering for heat island detection and mitigation suggestion generation.
   - Apply Explainable AI to validate and justify system recommendations.
 
-### 🏙️ Urban Simulation (Team Member 3)
+### 🏙️ Urban Simulation
 - **Research Question**: How can 3D urban simulation be used to predict the impact of construction on urban heat distribution?
 - **Objectives**:
   - Develop 3D models of urban environments using simulation software.
