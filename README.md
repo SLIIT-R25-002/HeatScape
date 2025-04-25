@@ -15,6 +15,13 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 
 ## 🔍 Individual Research Questions & Objectives
 
+### 🖼️ Image Analysis (Team Member 1)
+- **Research Question**: How can image segmentation be used to classify materials and surfaces contributing to UHI?
+- **Objectives**:
+  - Design a mobile app for image capture and automatic segmentation.
+  - Identify surface types (e.g., concrete, vegetation, asphalt) from photos.
+  - Store and manage segmented data for IoT integration and analysis.
+
 ### 🔧 IoT & Navigation (Sachinthaka Ayeshmantha)
 - **Research Question**: How can SLAM and thermal imaging be integrated in a mobile IoT device for efficient, automated temperature mapping of urban environments?
 - **Objectives**:
@@ -22,13 +29,6 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
   - Integrate GPS, gyroscope, and thermal sensors for location-aware temperature logging.
   - Implement image-based object matching for accurate temperature data alignment.
   - Optimize communication and power systems for long-duration outdoor operation.
-
-### 🖼️ Image Analysis (Team Member 1)
-- **Research Question**: How can image segmentation be used to classify materials and surfaces contributing to UHI?
-- **Objectives**:
-  - Design a mobile app for image capture and automatic segmentation.
-  - Identify surface types (e.g., concrete, vegetation, asphalt) from photos.
-  - Store and manage segmented data for IoT integration and analysis.
 
 ### 📊 Data Processing with VLMs (Team Member 2)
 - **Research Question**: How can Visual Language Models and Explainable AI improve interpretation of heat data and suggest mitigation strategies?
