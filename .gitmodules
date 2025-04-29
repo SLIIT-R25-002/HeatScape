@@ -7,3 +7,6 @@
 [submodule "vlm-solution-service"]
 	path = vlm-solution-service
 	url = https://github.com/SLIIT-R25-002/vlm-solution-service.git
+[submodule "Website"]
+	path = Website
+	url = https://github.com/SLIIT-R25-002/Website.git
