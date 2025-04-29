@@ -1,0 +1,9 @@
+[submodule "image-processing-service"]
+	path = image-processing-service
+	url = https://github.com/SLIIT-R25-002/image-processing-service.git
+[submodule "iot-localization-service"]
+	path = iot-localization-service
+	url = https://github.com/SLIIT-R25-002/iot-localization-service.git
+[submodule "vlm-solution-service"]
+	path = vlm-solution-service
+	url = https://github.com/SLIIT-R25-002/vlm-solution-service.git
