@@ -1,7 +1,7 @@
-# 🔥 HeatScape – AI-Driven Detection and Mitigation of Urban Heat Island Effects
+![image](https://github.com/user-attachments/assets/44e65a6f-c6f4-46aa-9c26-2862e91a6404)![image](https://github.com/user-attachments/assets/087c06c3-9b3b-4a12-8574-8d813e487665)# 🔥 HeatScape – AI-Driven Detection and Mitigation of Urban Heat Island Effects
 
 ## 🌍 Main Objective
-To develop **HeatScape**, a comprehensive system that leverages image analysis, IoT, and AI to detect and mitigate Urban Heat Island (UHI) effects. HeatScape uses a mobile robotic platform equipped with environmental sensors and computer vision to autonomously collect temperature data, analyze heat patterns, and simulate urban development scenarios for sustainable planning.
+To develop **HeatScape**, a comprehensive system that leverages image analysis, IoT, Digital twin technology and AI to detect and mitigate Urban Heat Island (UHI) effects. HeatScape uses a mobile robotic platform equipped with environmental sensors and computer vision to autonomously collect temperature data, analyze heat patterns, and simulate urban development scenarios for sustainable planning.
 
 ---
 
@@ -40,11 +40,11 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
   - Apply Explainable AI to validate and justify system recommendations.
 
 ### 🏙️ Urban Simulation
-- **Research Question**: How can 3D urban simulation be used to predict the impact of construction on urban heat distribution?
+- **Research Question**: How can an integrated real-time simulation tool combining Digital twins, GIS data and dynamic environmental parameters be developed for Urban Heat Island analysis?
 - **Objectives**:
-  - Develop 3D models of urban environments using simulation software.
-  - Model UHI effects with and without proposed infrastructure.
-  - Provide visual simulations to guide mitigation planning.
+  - Develop Digital twin models and 3D models of urban environments using simulation software.
+  - Develop simulation tool that integrate high resolution GIS data, Environmental data and Digital twin model. 
+  - Provide Thermal Impact analysis to guide mitigation planning.
 
 ---
 
@@ -76,7 +76,7 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 - **Sachinthaka Ayeshmantha** – IoT & Navigation
 - **Avishka Nuwan** – Image Analysis
 - **[Name]** – VLM & Data Processing
-- **[Name]** – Urban Simulation
+- **Osadha Madhuwantha** – Urban Simulation
 
 ---
 
