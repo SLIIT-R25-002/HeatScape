@@ -19,9 +19,9 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 - **Research Question**: How can deep learning-based object detection and segmentation be utilized to identify and analyze urban surface materials contributing to Urban Heat Island (UHI) effects?
 - **Objectives**:
   - Develop a mobile application for capturing urban scene images and performing on-device segmentation using models like YOLOv8 and SAM.
-  - Detect and segment key urban components (e.g., buildings, rooftops, pavements, vegetation).
-  - Classify materials (e.g., concrete, asphalt, metal, vegetation) using segmented regions.
-  - Calculate surface areas of each material type for thermal analysis and UHI impact assessment.
+  - Detect and segment key urban components.
+  - Classify materials using segmented regions.
+  - Calculate surface areas.
 
 
 ### 🔧 IoT & Navigation
