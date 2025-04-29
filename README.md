@@ -86,8 +86,8 @@ Follow these steps to set up the project from scratch:
 
 ### 1. Clone the Main Repository
 ```bash
-git clone https://github.com/SLIIT-R25-002/image-processing-service.git
-cd MediSync
+git clone https://github.com/SLIIT-R25-002/HeatScape.git
+cd HeatScape
 ```
 
 ### 2. Initialize and Update Submodules
@@ -96,15 +96,15 @@ To fetch the content of all submodules, run:
 git submodule update --init --recursive
 ```
 
-If you only want to fetch a specific submodule (e.g., `AppointmentService`), run:
+If you only want to fetch a specific submodule (e.g., `iot-localization-service`), run:
 ```bash
-git submodule update --init image-processing-service
+git submodule update --init iot-localization-service
 ```
 
 ### 3. Navigate to a Specific Service
 To work on a specific service, navigate to its directory. For example:
 ```bash
-cd image-processing-service
+cd iot-localization-service
 ```
 
 After navigating, follow the `README.md` file in that specific service's directory for further instructions.
