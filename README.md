@@ -80,8 +80,34 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 
 ---
 
-## 📌 How to Run the Project (Coming Soon)
-Setup instructions, hardware configurations, and software dependencies will be added as we finalize each module.
+## Steps to Clone and Initialize the Repository
+
+Follow these steps to set up the project from scratch:
+
+### 1. Clone the Main Repository
+```bash
+git clone https://github.com/SLIIT-R25-002/image-processing-service.git
+cd MediSync
+```
+
+### 2. Initialize and Update Submodules
+To fetch the content of all submodules, run:
+```bash
+git submodule update --init --recursive
+```
+
+If you only want to fetch a specific submodule (e.g., `AppointmentService`), run:
+```bash
+git submodule update --init image-processing-service
+```
+
+### 3. Navigate to a Specific Service
+To work on a specific service, navigate to its directory. For example:
+```bash
+cd image-processing-service
+```
+
+After navigating, follow the `README.md` file in that specific service's directory for further instructions.
 
 ---
 
