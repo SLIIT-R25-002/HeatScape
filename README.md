@@ -16,11 +16,13 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 ## 🔍 Individual Research Questions & Objectives
 
 ### 🖼️ Image Analysis
-- **Research Question**: How can image segmentation be used to classify materials and surfaces contributing to UHI?
+- **Research Question**: How can deep learning-based object detection and segmentation be utilized to identify and analyze urban surface materials contributing to Urban Heat Island (UHI) effects?
 - **Objectives**:
-  - Design a mobile app for image capture and automatic segmentation.
-  - Identify surface types (e.g., concrete, vegetation, asphalt) from photos.
-  - Store and manage segmented data for IoT integration and analysis.
+  - Develop a mobile application for capturing urban scene images and performing on-device segmentation using models like YOLOv8 and SAM.
+  - Detect and segment key urban components (e.g., buildings, rooftops, pavements, vegetation).
+  - Classify materials (e.g., concrete, asphalt, metal, vegetation) using segmented regions.
+  - Calculate surface areas of each material type for thermal analysis and UHI impact assessment.
+
 
 ### 🔧 IoT & Navigation
 - **Research Question**: How can SLAM and thermal imaging be integrated in a mobile IoT device for efficient, automated temperature mapping of urban environments?
@@ -72,7 +74,7 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 
 ## 👥 Team Members
 - **Sachinthaka Ayeshmantha** – IoT & Navigation
-- **[Name]** – Image Analysis
+- **Avishka Nuwan** – Image Analysis
 - **[Name]** – VLM & Data Processing
 - **[Name]** – Urban Simulation
 
