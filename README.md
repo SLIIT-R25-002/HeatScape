@@ -37,19 +37,17 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 - **Research Question**: How can Visual Language Models (VLMs) and Explainable AI improve interpretation of heat data and suggest actionable mitigation strategies for Urban Heat Island (UHI) effects?
 - **Objectives**:
   - Integrate segmented image data and environmental metrics (temperature, surface temperature, humidity, surface area) into a VLM pipeline.
-- Use prompt engineering with models like BLIP-2 or GPT-4-V to:
-  - Determine whether a location exhibits UHI effects.
-  - Generate clear, example-based mitigation suggestions (e.g., "Example – A red metal roof with no shade; Answer – Apply white reflective coating and install shading plants.").
-- Apply Explainable AI (XAI) to highlight which elements in the image influenced the model’s decision and recommendation.
+  - Use prompt engineering with models like BLIP-2 or GPT-4-V to:
+    - Determine whether a location exhibits UHI effects.
+    - Generate clear, example-based mitigation suggestions (e.g., "Example – A red metal roof with no shade; Answer – Apply white reflective coating and install shading plants.").
+  - Apply Explainable AI (XAI) to highlight which elements in the image influenced the model’s decision and recommendation.
 
 ### 🏙️ Urban Simulation
 - **Research Question**: How can an integrated real-time simulation tool combining Digital twins, GIS data and dynamic environmental parameters be developed for Urban Heat Island analysis?
 - **Objectives**:
-  - Integrate segmented image data and environmental metrics (temperature, surface temperature, humidity, surface area) into a VLM pipeline.
-- Use prompt engineering with models like BLIP-2 or GPT-4-V to:
-  - Determine whether a location exhibits UHI effects.
-  - Generate clear, example-based mitigation suggestions (e.g., "Example – A red metal roof with no shade; Answer – Apply white reflective coating and install shading plants.").
-- Apply Explainable AI (XAI) to highlight which elements in the image influenced the model’s decision and recommendation.
+  - Develop Digital twin models and 3D models of urban environments using simulation software.
+  - Develop simulation tool that integrate high resolution GIS data, Environmental data and Digital twin model. 
+  - Provide Thermal Impact analysis to guide mitigation planning.
 
 ---
 
