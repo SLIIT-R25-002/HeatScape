@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/44e65a6f-c6f4-46aa-9c26-2862e91a6404)![image](https://github.com/user-attachments/assets/087c06c3-9b3b-4a12-8574-8d813e487665)# 🔥 HeatScape – AI-Driven Detection and Mitigation of Urban Heat Island Effects
+![image](https://github.com/user-attachments/assets/44e65a6f-c6f4-46aa-9c26-2862e91a6404)![image](https://github.com/user-attachments/assets/087c06c3-9b3b-4a12-8574-8d813e487665)
+# 🔥 HeatScape – AI-Driven Detection and Mitigation of Urban Heat Island Effects
 
 ## 🌍 Main Objective
 To develop **HeatScape**, a comprehensive system that leverages image analysis, IoT, Digital twin technology and AI to detect and mitigate Urban Heat Island (UHI) effects. HeatScape uses a mobile robotic platform equipped with environmental sensors and computer vision to autonomously collect temperature data, analyze heat patterns, and simulate urban development scenarios for sustainable planning.
@@ -32,8 +33,8 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
   - Implement image-based object matching for accurate temperature data alignment.
   - Optimize communication and power systems for long-duration outdoor operation.
 
-### 📊 Data Processing with VLMs
-- **Research Question**: How can Visual Language Models and Explainable AI improve interpretation of heat data and suggest mitigation strategies?
+### 📊 VLM & Data Processing
+- **Research Question**: How can Visual Language Models (VLMs) and Explainable AI improve interpretation of heat data and suggest actionable mitigation strategies for Urban Heat Island (UHI) effects?
 - **Objectives**:
   - Integrate collected temperature and image data into a VLM pipeline.
   - Use prompt engineering for heat island detection and mitigation suggestion generation.
@@ -42,9 +43,11 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 ### 🏙️ Urban Simulation
 - **Research Question**: How can an integrated real-time simulation tool combining Digital twins, GIS data and dynamic environmental parameters be developed for Urban Heat Island analysis?
 - **Objectives**:
-  - Develop Digital twin models and 3D models of urban environments using simulation software.
-  - Develop simulation tool that integrate high resolution GIS data, Environmental data and Digital twin model. 
-  - Provide Thermal Impact analysis to guide mitigation planning.
+  - Integrate segmented image data and environmental metrics (temperature, surface temperature, humidity, surface area) into a VLM pipeline.
+- Use prompt engineering with models like BLIP-2 or GPT-4-V to:
+  - Determine whether a location exhibits UHI effects.
+  - Generate clear, example-based mitigation suggestions (e.g., "Example – A red metal roof with no shade; Answer – Apply white reflective coating and install shading plants.").
+- Apply Explainable AI (XAI) to highlight which elements in the image influenced the model’s decision and recommendation.
 
 ---
 
@@ -75,7 +78,7 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 ## 👥 Team Members
 - **Sachinthaka Ayeshmantha** – IoT & Navigation
 - **Avishka Nuwan** – Image Analysis
-- **[Name]** – VLM & Data Processing
+- **Sandithya Sasmini** – VLM & Data Processing
 - **Osadha Madhuwantha** – Urban Simulation
 
 ---
