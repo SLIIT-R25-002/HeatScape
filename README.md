@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/44e65a6f-c6f4-46aa-9c26-2862e91a6404)![image](https://github.com/user-attachments/assets/087c06c3-9b3b-4a12-8574-8d813e487665)
+
 # 🔥 HeatScape – AI-Driven Detection and Mitigation of Urban Heat Island Effects
 
 ## 🌍 Main Objective
