@@ -36,9 +36,11 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 ### 📊 VLM & Data Processing
 - **Research Question**: How can Visual Language Models (VLMs) and Explainable AI improve interpretation of heat data and suggest actionable mitigation strategies for Urban Heat Island (UHI) effects?
 - **Objectives**:
-  - Integrate collected temperature and image data into a VLM pipeline.
-  - Use prompt engineering for heat island detection and mitigation suggestion generation.
-  - Apply Explainable AI to validate and justify system recommendations.
+  - Integrate segmented image data and environmental metrics (temperature, surface temperature, humidity, surface area) into a VLM pipeline.
+- Use prompt engineering with models like BLIP-2 or GPT-4-V to:
+  - Determine whether a location exhibits UHI effects.
+  - Generate clear, example-based mitigation suggestions (e.g., "Example – A red metal roof with no shade; Answer – Apply white reflective coating and install shading plants.").
+- Apply Explainable AI (XAI) to highlight which elements in the image influenced the model’s decision and recommendation.
 
 ### 🏙️ Urban Simulation
 - **Research Question**: How can an integrated real-time simulation tool combining Digital twins, GIS data and dynamic environmental parameters be developed for Urban Heat Island analysis?
