@@ -53,7 +53,7 @@ To develop **HeatScape**, a comprehensive system that leverages image analysis, 
 
 ## 🔩 Technologies Used
 - **Hardware**: ESP32-CAM, MLX90640 (Thermal Sensor), RPLiDAR A1, MPU6050/BNO055 (IMU), GY-NEO6MV2 (GPS), DC Motors with Encoders, Servo Mount
-- **Software**: Python, Arduino, C++, React Native (Mobile App), MQTT (Communication), ROS (SLAM), SuperGlue (Feature Matching), Visual Language Models (e.g., BLIP), Unity/Blender (Simulation)
+- **Software**: Python, Arduino, C++, React Native (Mobile App), MQTT (Communication), ROS (SLAM), SuperGlue (Feature Matching), Visual Language Models (e.g., BLIP), Unity/Blender, Matlab/Simulink (Simulation)
 - **Platforms**: GitHub, Firebase/Backend, Cloud APIs
 
 ---
