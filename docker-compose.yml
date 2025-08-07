@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  image-processing-service:
+    build:
+      context: ./image-processing-service
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./image-processing-service/uploads:/app/uploads
+      - ./image-processing-service/weights:/app/weights
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=0
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - heatscape-network
+
+  vlm-solution-service:
+    build:
+      context: ./vlm-solution-service/backend
+      dockerfile: Dockerfile
+    ports:
+      - "5002:5000"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=0
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - heatscape-network
+
+  iot-localization-service:
+    build:
+      context: ./iot-localization-service/backend
+      dockerfile: Dockerfile
+    ports:
+      - "5003:5000"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=0
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - heatscape-network
+
+networks:
+  heatscape-network:
+    driver: bridge
+
+volumes:
+  image-uploads:
+    driver: local
