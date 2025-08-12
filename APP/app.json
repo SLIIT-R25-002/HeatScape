@@ -2,6 +2,7 @@
   "expo": {
     "name": "HeatScape",
     "slug": "heatscape-app",
+    "owner": "heatscape",
     "version": "1.0.0",
     "orientation": "auto",
     "icon": "./assets/images/icon.png",
@@ -16,7 +17,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.huntrix007.carremote"
+      "package": "com.sliit.heatscape"
     },
     "web": {
       "bundler": "metro",
@@ -43,7 +44,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "bfdbe7bb-8711-4753-b7ef-26f987af7fdf"
+        "projectId": "9d95da66-c38e-4ba8-a887-0c6cf84bedec"
       }
     }
   }
