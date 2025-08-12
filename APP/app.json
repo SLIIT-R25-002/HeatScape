@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "car-remote",
-    "slug": "car-remote",
+    "name": "HeatScape",
+    "slug": "heatscape-app",
     "version": "1.0.0",
     "orientation": "auto",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "heatscape",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
