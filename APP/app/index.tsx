@@ -11,65 +11,42 @@ import {
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Index() {
   const [sessionId, setSessionId] = useState('');
   const [isConnected, setIsConnected] = useState(false);
 
-  useEffect(() => {
-    // Request camera permissions on component mount
-    requestPermissions();
-  }, []);
-
-  const requestPermissions = async () => {
+  const checkExistingSession = async () => {
     try {
-      // For now, we'll just log this - we'll add proper camera permissions later
-      console.log('Requesting permissions...');
+      const existingSessionId = await AsyncStorage.getItem('currentSessionId');
+      if (existingSessionId) {
+        setSessionId(existingSessionId);
+        setIsConnected(true);
+      }
     } catch (error) {
-      console.error('Permission request failed:', error);
+      console.error('Error checking existing session:', error);
     }
   };
 
-  const handleManualJoin = () => {
+  const handleManualJoin = async () => {
     if (!sessionId.trim()) {
       Alert.alert('Error', 'Please enter a session ID');
       return;
     }
     
-    Alert.alert(
-      'Join Session',
-      `Join session: ${sessionId}?`,
-      [
-        { text: 'Cancel', style: 'cancel' },
-        { 
-          text: 'Join', 
-          onPress: () => {
-            setIsConnected(true);
-            console.log('Joined session:', sessionId);
-          }
-        }
-      ]
-    );
+    try {
+      await AsyncStorage.setItem('currentSessionId', sessionId.trim());
+      setIsConnected(true);
+      Alert.alert('Success', `Joined session: ${sessionId.trim()}`);
+    } catch (error) {
+      console.error('Error saving session:', error);
+      Alert.alert('Error', 'Failed to join session');
+    }
   };
 
   const handleQRScan = () => {
-    // For now, simulate QR scanning - we'll implement actual QR scanning later
-    Alert.alert(
-      'QR Scanner',
-      'QR scanning will be implemented here',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        { 
-          text: 'Simulate Scan', 
-          onPress: () => {
-            const mockSessionId = 'gZE2FR7I96OMPLRF8RS4';
-            setSessionId(mockSessionId);
-            setIsConnected(true);
-            Alert.alert('QR Scanned', `Session ID: ${mockSessionId}`);
-          }
-        }
-      ]
-    );
+    router.push('./qr-scanner');
   };
 
   const handleTakePhoto = () => {
@@ -78,26 +55,24 @@ export default function Index() {
       return;
     }
 
-    Alert.alert(
-      'Take Photo',
-      'Camera functionality will be implemented here',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        { 
-          text: 'Open Camera', 
-          onPress: () => {
-            console.log('Opening camera for session:', sessionId);
-            // Navigate to camera screen or implement camera functionality
-          }
-        }
-      ]
-    );
+    router.push('./camera');
   };
 
-  const resetSession = () => {
-    setSessionId('');
-    setIsConnected(false);
+  const resetSession = async () => {
+    try {
+      await AsyncStorage.removeItem('currentSessionId');
+      setSessionId('');
+      setIsConnected(false);
+      Alert.alert('Success', 'Left session successfully');
+    } catch (error) {
+      console.error('Error leaving session:', error);
+    }
   };
+
+  useEffect(() => {
+    // Check if there's an existing session
+    checkExistingSession();
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>

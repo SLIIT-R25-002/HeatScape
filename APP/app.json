@@ -4,7 +4,7 @@
     "slug": "heatscape-app",
     "owner": "heatscape",
     "version": "1.0.0",
-    "orientation": "auto",
+    "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "heatscape",
     "userInterfaceStyle": "automatic",
@@ -17,7 +17,12 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.sliit.heatscape"
+      "package": "com.sliit.heatscape",
+      "versionCode": 1,
+      "compileSdkVersion": 34,
+      "targetSdkVersion": 34,
+      "minSdkVersion": 23,
+      "buildToolsVersion": "34.0.0"
     },
     "web": {
       "bundler": "metro",

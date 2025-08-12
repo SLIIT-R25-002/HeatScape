@@ -9,17 +9,27 @@
         "buildType": "apk"
       }
     },
-    "preview2": {
+    "preview-aab": {
       "android": {
-        "gradleCommand": ":app:assembleRelease"
+        "buildType": "app-bundle",
+        "image": "latest",
+        "env": {
+          "NODE_ENV": "production",
+          "EXPO_OPTIMIZE": "true"
+        }
       }
     },
-    "preview3": {
-      "developmentClient": true
-    },
-    "preview4": {
-      "distribution": "internal"
-    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle",
+        "env": {
+          "NODE_ENV": "production",
+          "EXPO_OPTIMIZE": "true"
+        }
+      }
+    }
+  },
+  "submit": {
     "production": {}
   }
 }
