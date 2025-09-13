@@ -11,7 +11,9 @@ services:
       - ./image-processing-service:/app:ro
       - ./image-processing-service/uploads:/app/uploads
       - ./image-processing-service/weights:/app/weights
+    runtime: nvidia
     environment:
+      - NVIDIA_VISIBLE_DEVICES=all
       - FLASK_ENV=development
       - FLASK_DEBUG=1
     command: ["python", "-m", "flask", "run", "--host=0.0.0.0", "--reload"]
@@ -54,7 +56,9 @@ services:
       - "5003:5000"
     volumes:
       - ./iot-localization-service/backend:/app:ro
+    runtime: nvidia
     environment:
+      - NVIDIA_VISIBLE_DEVICES=all
       - FLASK_ENV=development
       - FLASK_DEBUG=1
     healthcheck:
