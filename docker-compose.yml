@@ -8,12 +8,13 @@ services:
     ports:
       - "5001:5000"
     volumes:
+      - ./image-processing-service:/app:ro
       - ./image-processing-service/uploads:/app/uploads
       - ./image-processing-service/weights:/app/weights
     environment:
-      - FLASK_ENV=production
-      - FLASK_DEBUG=0
-    restart: unless-stopped
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+    command: ["python", "-m", "flask", "run", "--host=0.0.0.0", "--reload"]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
       interval: 30s
@@ -29,11 +30,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5002:5000"
+    volumes:
+      - ./vlm-solution-service/backend:/app:ro
     environment:
-      - FLASK_ENV=production
-      - FLASK_DEBUG=0
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
       - GEMINI_API_KEY=${GEMINI_API_KEY}
-    restart: unless-stopped
+    command: ["python", "-m", "flask", "run", "--host=0.0.0.0", "--reload"]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
       interval: 30s
@@ -49,10 +52,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5003:5000"
+    volumes:
+      - ./iot-localization-service/backend:/app:ro
     environment:
-      - FLASK_ENV=production
-      - FLASK_DEBUG=0
-    restart: unless-stopped
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
       interval: 30s
@@ -61,6 +65,34 @@ services:
       start_period: 60s
     networks:
       - heatscape-network
+
+  uhi-simulation-service:
+    build:
+      context: ./uhi-simulation-service/backend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    environment:
+      - NODE_ENV=development
+      - PORT=4200
+    volumes:
+      # Mount source files individually to preserve node_modules
+      - ./uhi-simulation-service/backend/server.js:/app/server.js:ro
+      - ./uhi-simulation-service/backend/package.json:/app/package.json:ro
+      - ./uhi-simulation-service/backend/.env:/app/.env:ro
+      - ./uhi-simulation-service/backend/uploads:/app/uploads
+      - ./uhi-simulation-service/backend/results:/app/results
+    command: ["npm", "run", "start"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4200/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - heatscape-network
+    depends_on:
+      - vlm-solution-service
 
 networks:
   heatscape-network:
