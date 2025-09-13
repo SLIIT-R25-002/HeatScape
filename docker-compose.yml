@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   image-processing-service:
     build:
@@ -11,9 +9,9 @@ services:
       - ./image-processing-service:/app:ro
       - ./image-processing-service/uploads:/app/uploads
       - ./image-processing-service/weights:/app/weights
-    runtime: nvidia
+    runtime: nvidia  # Commented out due to WSL compatibility issues
     environment:
-      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_VISIBLE_DEVICES=all  # Commented out due to WSL compatibility issues
       - FLASK_ENV=development
       - FLASK_DEBUG=1
     command: ["python", "-m", "flask", "run", "--host=0.0.0.0", "--reload"]
@@ -53,7 +51,7 @@ services:
       context: ./iot-localization-service/backend
       dockerfile: Dockerfile
     ports:
-      - "5003:5000"
+      - "5004:5000"
     volumes:
       - ./iot-localization-service/backend:/app:ro
     runtime: nvidia
