@@ -41,24 +41,14 @@ I have successfully reviewed and improved the Docker configuration for all four 
 
 ## Docker Compose Configuration
 
-### Main Configuration (`docker-compose.yml`)
+### Simplified Configuration (`docker-compose.yml`)
+- Single file with development-focused settings
 - All four services properly configured
 - Network isolation with `heatscape-network`
 - Health checks for all services
-- Proper dependency management
+- Hot-reload enabled for Flask services
+- Source code mounted for development
 - Volume mounts for persistent data
-
-### Development Override (`docker-compose.dev.yml`)
-- Hot-reload enabled for all services
-- Source code mounted as read-only volumes
-- Development environment variables
-- Debug mode enabled for Flask services
-
-### Production Override (`docker-compose.prod.yml`)
-- Resource limits and reservations
-- Always restart policy
-- Production environment settings
-- Optimized for stability and performance
 
 ## Enhanced Files
 
@@ -105,15 +95,11 @@ I have successfully reviewed and improved the Docker configuration for all four 
 ### Quick Start (Development)
 ```bash
 # Windows
-.\\setup.bat
+.\setup.bat
+# Select option 1: "Start services"
 
 # Or manually
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build
-```
-
-### Production Deployment
-```bash
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+docker-compose up --build
 ```
 
 ### Individual Service Management

@@ -36,6 +36,12 @@ This directory contains Docker configurations for the HeatScape services. The fo
    docker-compose up -d --build
    ```
 
+5. **Use the setup script (Windows)**
+   ```bash
+   .\setup.bat
+   # Select option 1: "Start services"
+   ```
+
 ## Service Endpoints
 
 - Image Processing Service: http://localhost:5001
@@ -51,6 +57,23 @@ docker-compose build image-processing-service
 docker-compose build vlm-solution-service
 docker-compose build iot-localization-service
 docker-compose build uhi-simulation-service
+```
+
+### Run specific service
+```bash
+docker-compose up image-processing-service
+docker-compose up vlm-solution-service
+docker-compose up iot-localization-service
+docker-compose up uhi-simulation-service
+```
+
+### View logs for specific service
+```bash
+docker-compose logs -f image-processing-service
+docker-compose logs -f vlm-solution-service
+docker-compose logs -f iot-localization-service
+docker-compose logs -f uhi-simulation-service
+```
 ```
 
 ### Run specific service

@@ -55,7 +55,7 @@ echo.
 
 set /p choice="Please select an option (1-7): "
 
-if "%choice%"=="1" goto dev_mode
+if "%choice%"=="1" goto start_services
 if "%choice%"=="2" goto stop_services
 if "%choice%"=="3" goto view_logs
 if "%choice%"=="4" goto check_status
@@ -66,14 +66,9 @@ echo [ERROR] Invalid option. Please try again.
 pause
 goto menu
 
-:dev_mode
+:start_services
 echo [INFO] Starting services in development mode...
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build
-goto show_status
-
-:prod_mode
-echo [INFO] Starting services in production mode...
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+docker-compose up --build
 goto show_status
 
 :stop_services
