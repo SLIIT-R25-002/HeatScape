@@ -45,3 +45,17 @@ services:
         reservations:
           cpus: '1.0'
           memory: 2G
+
+  uhi-simulation-service:
+    environment:
+      - NODE_ENV=production
+      - PORT=4200
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M

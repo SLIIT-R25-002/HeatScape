@@ -44,26 +44,24 @@ cls
 echo.
 echo HeatScape Docker Setup
 echo =====================
-echo 1. Start services (development mode)
-echo 2. Start services (production mode)
-echo 3. Stop services
-echo 4. View logs
-echo 5. Check status
-echo 6. Clean up (remove containers and images)
-echo 7. Build only
-echo 8. Exit
+echo 1. Start services
+echo 2. Stop services
+echo 3. View logs
+echo 4. Check status
+echo 5. Clean up (remove containers and images)
+echo 6. Build only
+echo 7. Exit
 echo.
 
-set /p choice="Please select an option (1-8): "
+set /p choice="Please select an option (1-7): "
 
 if "%choice%"=="1" goto dev_mode
-if "%choice%"=="2" goto prod_mode
-if "%choice%"=="3" goto stop_services
-if "%choice%"=="4" goto view_logs
-if "%choice%"=="5" goto check_status
-if "%choice%"=="6" goto cleanup
-if "%choice%"=="7" goto build_only
-if "%choice%"=="8" goto exit_script
+if "%choice%"=="2" goto stop_services
+if "%choice%"=="3" goto view_logs
+if "%choice%"=="4" goto check_status
+if "%choice%"=="5" goto cleanup
+if "%choice%"=="6" goto build_only
+if "%choice%"=="7" goto exit_script
 echo [ERROR] Invalid option. Please try again.
 pause
 goto menu
@@ -99,6 +97,7 @@ echo [INFO] Service URLs:
 echo   Image Processing Service: http://localhost:5001
 echo   VLM Solution Service: http://localhost:5002
 echo   IoT Localization Service: http://localhost:5003
+echo   UHI Simulation Service: http://localhost:4200
 echo.
 pause
 goto menu

@@ -28,3 +28,13 @@ services:
       - FLASK_DEBUG=1
     volumes:
       - ./iot-localization-service/backend:/app:ro
+
+  uhi-simulation-service:
+    environment:
+      - NODE_ENV=development
+      - PORT=4200
+    volumes:
+      - ./uhi-simulation-service/backend:/app:ro
+      - ./uhi-simulation-service/backend/uploads:/app/uploads
+      - ./uhi-simulation-service/backend/results:/app/results
+    command: ["npm", "run", "dev"]

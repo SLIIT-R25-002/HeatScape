@@ -5,6 +5,7 @@ This directory contains Docker configurations for the HeatScape services. The fo
 - **Image Processing Service** (Port 5001) - Computer vision and image analysis
 - **VLM Solution Service** (Port 5002) - Machine learning predictions and Gemini AI integration  
 - **IoT Localization Service** (Port 5003) - SuperGlue feature matching for localization
+- **UHI Simulation Service** (Port 4200) - Urban Heat Island simulation and MATLAB integration
 
 ## Prerequisites
 
@@ -40,6 +41,7 @@ This directory contains Docker configurations for the HeatScape services. The fo
 - Image Processing Service: http://localhost:5001
 - VLM Solution Service: http://localhost:5002  
 - IoT Localization Service: http://localhost:5003
+- UHI Simulation Service: http://localhost:4200
 
 ## Individual Service Commands
 
@@ -48,6 +50,7 @@ This directory contains Docker configurations for the HeatScape services. The fo
 docker-compose build image-processing-service
 docker-compose build vlm-solution-service
 docker-compose build iot-localization-service
+docker-compose build uhi-simulation-service
 ```
 
 ### Run specific service

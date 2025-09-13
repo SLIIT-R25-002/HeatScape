@@ -62,6 +62,30 @@ services:
     networks:
       - heatscape-network
 
+  uhi-simulation-service:
+    build:
+      context: ./uhi-simulation-service/backend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    environment:
+      - NODE_ENV=production
+      - PORT=4200
+    volumes:
+      - ./uhi-simulation-service/backend/uploads:/app/uploads
+      - ./uhi-simulation-service/backend/results:/app/results
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4200/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - heatscape-network
+    depends_on:
+      - vlm-solution-service
+
 networks:
   heatscape-network:
     driver: bridge
