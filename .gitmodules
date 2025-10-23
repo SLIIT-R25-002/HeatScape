@@ -16,3 +16,6 @@
 [submodule "App"]
 	path = App
 	url = https://github.com/SLIIT-R25-002/App.git
+[submodule "Website"]
+	path = Website
+	url = https://github.com/SLIIT-R25-002/Website.git
