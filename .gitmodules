@@ -11,7 +11,7 @@
 	path = uhi-simulation-service
 	url = https://github.com/SLIIT-R25-002/uhi-simulation-service.git
 [submodule "Frontend"]
-	path = Website
+	path = Frontend
 	url = https://github.com/SLIIT-R25-002/Frontend.git
 [submodule "App"]
 	path = App
